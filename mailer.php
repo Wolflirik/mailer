@@ -87,7 +87,7 @@ class Mailer{
 				$body = str_replace($search, $replacements, $default['text'].$delivery['text'].$default['text_courier']);
 			else
 				$body = str_replace($search, $replacements, $default['text'].$delivery['text_courier'].$default['text_courier']);
-			if(isset($row['email']) && $row['email'] == 'kiryawolfgo@gmail.com'){
+			if(isset($row['email'])){
 				$mail = new Mail;
 				$mail->From($smtp['email_login']);
 				$mail->To($row['email']);
