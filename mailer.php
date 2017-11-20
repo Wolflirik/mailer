@@ -96,7 +96,7 @@ class Mailer{
 				$mail->Priority(1);
 				$mail->smtp_on($smtp['email_server'], $smtp['email_login'], $smtp['email_password'], (int)$smtp['email_port']);
 				$mail->Send();
-				//$this->db->query("UPDATE `orders` SET `email_status` = '1' WHERE `orders`.`id` = '".$row['id']."'");
+				$this->db->query("UPDATE `orders` SET `email_status` = '1' WHERE `orders`.`id` = '".$row['id']."'");
 			}
 		}
 	}
