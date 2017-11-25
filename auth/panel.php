@@ -25,15 +25,15 @@ if(isset($_SESSION['user'])){
 		</div>
 		<?php foreach($results as $r){ ?>
 		<?php if($r['id'] == 0){?>
-		<div class="group">
-			<h3 class="heading-title"><?php echo $r['name']; ?><button class="button set" id="<?php echo $r['id']; ?>">Установить шаблон</button></h3>
+		<div class="group lock">
+			<h3 class="heading-title"><?php echo $r['name']; ?><button class="button unlock" style="float:right;background-color:#c3c3c3;margin-left:10px;">Разблокировать</button><button class="button set" id="<?php echo $r['id']; ?>">Установить шаблон</button></h3>
 			<div class="text-box">
 				<label>Шапка</label>
-				<textarea class="text" rows="8"><?php echo $r['text']; ?></textarea>
+				<textarea class="text" rows="8" disabled="disabled"><?php echo $r['text']; ?></textarea>
 			</div>
 			<div class="text-box">
 				<label>Подвал</label>
-				<textarea class="text_courier" rows="8"><?php echo $r['text_courier']; ?></textarea>
+				<textarea class="text_courier" rows="8" disabled="disabled"><?php echo $r['text_courier']; ?></textarea>
 			</div>
 		</div>
 		<?php }else{ ?>
