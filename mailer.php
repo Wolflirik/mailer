@@ -101,7 +101,7 @@ class Mailer{
 				$mail = new Mail;
 				$mail->From($smtp['email_login']);
 				$mail->To($row['email']);
-				$mail->BCC('delivery@for.care');
+				//$mail->BCC('your@email.ru'); 
 				$mail->Subject('Заказ '. $row['track'] .' отправлен службой '. $delivery['name']);
 				$mail->body($body, "html");
 				$mail->Priority(1);
