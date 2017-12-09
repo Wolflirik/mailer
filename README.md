@@ -49,4 +49,5 @@
 %text_map% - Схема проезда
 </pre>
 
+<p>Для работы необходим cron, исполняемый файл - <a href="https://github.com/Wolflirik/mailer/blob/master/mailer.php">mailer.php</a></p>
 
